@@ -21,7 +21,6 @@ export class AppComponent {
 
   onSelectUser(id: string) {
     this.userid = id;
-    return this.userid;
   }
 
   
