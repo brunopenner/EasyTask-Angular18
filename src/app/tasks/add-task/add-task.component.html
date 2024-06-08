@@ -1,0 +1,29 @@
+<button (click)="showForm()">Add Task</button>
+
+<div *ngIf="isFormVisible">
+  <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
+    <div>
+      <label for="name">Task Name:</label>
+      <input type="text" id="name" name="name" ngModel required>
+    </div>
+    
+    <div>
+      <label for="description">Task Description:</label>
+      <textarea id="description" name="description" ngModel required></textarea>
+    </div>
+    
+    <div>
+      <label for="dueDate">Due Date:</label>
+      <input type="date" id="dueDate" name="dueDate" ngModel required>
+    </div>
+    
+    <button type="submit">Add Task</button>
+  </form>
+</div>
+
+<div *ngIf="task">
+  <h3>Task Details:</h3>
+  <p><strong>Name:</strong> {{ task.name }}</p>
+  <p><strong>Description:</strong> {{ task.description }}</p>
+  <p><strong>Due Date:</strong> {{ task.dueDate | date }}</p>
+</div>
