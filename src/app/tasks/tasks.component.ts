@@ -3,6 +3,7 @@ import { TaskComponent } from "./task/task.component";
 import { AddTaskComponent } from "./add-task/add-task.component";
 import { NewTaskComponent } from "./new-task/new-task.component";
 import { NewTaskData } from "./task/task.model";
+import { TasksService } from "./tasks.service";
 
 
 @Component ({
@@ -18,9 +19,12 @@ export class tasksComponent {
     @Input ({required: true}) name!:string;
     isAddingTask = false;
     
+    constructor(private tasksService: TasksService) {
+
+    }
 
     get selectedUserTasks() {
-        return 
+        return this.tasksService.getUserTasks(this.userId);
     }
 
     onCompleteTask(id: string) {
