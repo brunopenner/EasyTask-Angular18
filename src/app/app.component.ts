@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
-import { UserComponent } from './user/user.component';
+// import { HeaderComponent } from './header/header.component';
+// import { UserComponent } from './user/user.component';
 import { DUMMY_USERS } from './dummy-users';
-import { tasksComponent } from './tasks/tasks.component';
+// import { tasksComponent } from './tasks/tasks.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [HeaderComponent, UserComponent, tasksComponent],
+  // standalone: true,
+  // imports: [HeaderComponent, UserComponent, tasksComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
