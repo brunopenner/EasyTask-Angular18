@@ -1,16 +1,16 @@
 import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { type User } from './user.model';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { CardComponent } from "../shared/card/card.component";
+// import { FormsModule } from '@angular/forms';
+// import { CommonModule } from '@angular/common';
+// import { CardComponent } from "../shared/card/card.component";
 
 
 @Component({
     selector: 'app-user',
-    standalone: true,
+    // standalone: true,
     templateUrl: './user.component.html',
     styleUrl: './user.component.css',
-    imports: [CommonModule, FormsModule, CardComponent]
+    // imports: [CommonModule, FormsModule, CardComponent]
 })
 
 export class UserComponent {
